@@ -52,3 +52,17 @@ For support, questions, or feedback regarding the Simulation Crew or crewAI.
 - [Chat with our docs](https://chatg.pt/DWjSBZn)
 
 Let's create wonders together with the power and simplicity of crewAI.
+
+# Créer un environnement virtuel
+python -m venv .venv
+
+# L’activer (selon l’OS)
+# Windows
+.venv\Scripts\activate
+
+# macOS / Linux
+source .venv/bin/activate
+
+# Installer les dépendances
+pip install -r requirements.txt
+
