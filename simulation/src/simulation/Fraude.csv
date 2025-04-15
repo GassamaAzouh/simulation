@@ -1,0 +1,161 @@
+ID Clients;Numero de compte;Identifiant operation;Type de transaction;Status operation;Localisation;Date;Montant;Target
+10123;5890123;OP12345;Paiement électronique;Validé;Ziguinchor;15/03/2024 23:50;12000000;Fraude
+23456;58098765;OP67890;ATM;Validé;Tambacounda;28/11/2023 02:00;8000000;Fraude
+29987;58123456;OP161718;ATM;Validé;Saint Louis;10/10/2023 22:30;10000000;Fraude
+34219;58012398;OP192021;Paiement en ligne;Validé;Kaolack;25/05/2024 11:00;7000000;Fraude
+10345;58901549;OP12345;Paiement électronique;Validé;Ziguinchor;15/03/2024 23:59;14000000;Fraude
+30501;58601549;OP67890;ATM;Validé;Tambacounda;01/07/2024 00:01;8000000;Fraude
+15678;58123456;OP131415;Paiement en ligne;Echoué;Kédougou;28/11/2023 10:30;10000000;Fraude
+18030;5810380;Op107;ATM;Validé;Dakar;20/03/2025 11:00;2000000;Fraude
+10802;5808012;Op106;Paiement en ligne;Validé;Ziguinchor;05/01/2025 23:00;400000;Fraude
+112;581234560;Op15;ATM;Validé;Ziguinchor;31/12/2024 23:59;1000000;Fraude
+1550;5810204050;OP1004;Paiement en ligne;Validé;Diourbel;25/12/2024 23:00;750000;Fraude
+159;58159;OP1012;Paiement en ligne;Validé;Richard Toll;25/12/2024 01:00;250000;Fraude
+151;58151;Op99;Paiement en ligne;Validé;Kaolack;18/12/2024 08:00;7500000;Fraude
+1480;58814;Op91;Paiement en ligne;Validé;Kaolack;15/12/2024 21:00;1000000;Fraude
+116;58116;Op26;ATM;Echoué;Dakar;12/12/2024 18:30;300000;Fraude
+137;588235;Op63;ATM;Validé;Tambacounda;10/12/2024 22:00;700000;Fraude
+136;588123;Op62;Paiement électronique;Echoué;Dakar;25/11/2024 19:00;500000;Fraude
+158;58185;OP1011;ATM;Validé;Mbour;20/11/2024 02:00;500000;Fraude
+127;58712;Op39;ATM;Validé;Kaolack;18/11/2024 10:00;50000;Fraude
+18001;5800181;Op105;Paiement électronique;En attente;Kaolack;18/11/2024 00:00;800000;Fraude
+171;5808991;OP1035;Paiement électronique;Echoué;Dakar;12/11/2024 10:00;750000;Fraude
+114;581234570;Op20;Paiement électronique;En attente;Matam;10/11/2024 11:00;900000;Fraude
+166;58166;OP1028;ATM;Echoué;Dakar;10/11/2024 10:00;1000000;Fraude
+1470;58147;Op90;ATM;Validé;Saint Louis;10/11/2024 00:00;250000;Fraude
+152;58215;Op98;ATM;Validé;Diourbel;05/11/2024 00:00;2000000;Fraude
+1800;580018;OP1055;Paiement en ligne;Validé;Fatick;20/10/2024 12:00;5000000;Fraude
+157;58715;OP1010;Paiement en ligne;Validé;Matam;15/10/2024 23:00;3000000;Fraude
+178;58187;OP1046;Paiement en ligne;Validé;Kolda;10/10/2024 01:00;150000;Fraude
+1460;58146;Op89;Paiement électronique;Echoué;Dakar;05/10/2024 19:00;500000;Fraude
+1500;58105;Op88;Paiement en ligne;Validé;Louga;30/09/2024 23:00;1500000;Fraude
+130;58345700;Op48;Paiement électronique;Validé;Dakar;28/09/2024 23:00;2000000;Fraude
+154;58154;Op96;Paiement en ligne;Validé;Dakar;25/09/2024 23:00;5000000;Fraude
+120;58123456;Op34;Paiement électronique;En attente;Diourbel;20/09/2024 14:00;500000;Fraude
+1770;580717;OP1054;ATM;Validé;Louga;15/09/2024 00:00;300000;Fraude
+147;588123457;Op81;ATM;Validé;Tambacounda;12/09/2024 22:00;750000;Fraude
+140;588568;Op61;Paiement en ligne;Validé;Ziguinchor;12/09/2024 01:00;1200000;Fraude
+156;58156;OP1009;ATM;Validé;Kédougou;10/09/2024 20:00;600000;Fraude
+10085;5805180;Op104;ATM;Validé;Touba;10/09/2024 07:00;1200000;Fraude
+183;58138;Op116;ATM;Validé;Kaolack;02/09/2024 11:00;4000000;Fraude
+170;58017;OP1027;ATM;Validé;Thiès;01/09/2024 22:00;4000000;Fraude
+160;58016;OP1013;Paiement électronique;Validé;Diourbel;01/09/2024 19:00;1000000;Fraude
+1520;5810405060;OP1006;Paiement en ligne;Validé;Matam;01/09/2024 09:00;2500000;Fraude
+182;58812;Op115;Paiement électronique;Validé;Podor;01/09/2024 01:00;3000000;Fraude
+181;58181;Op114;Paiement en ligne;Validé;Ziguinchor;31/08/2024 23:00;1500000;Fraude
+1760;580176;OP1053;Paiement électronique;Echoué;Dakar;30/08/2024 18:00;2000000;Fraude
+185;58518;Op113;ATM;Validé;Thiès;30/08/2024 14:00;10000000;Fraude
+184;58184;Op112;Paiement en ligne;Validé;Saint Louis;29/08/2024 06:00;5000000;Fraude
+183;58138;Op111;Paiement électronique;Validé;Kaolack;28/08/2024 02:00;3000000;Fraude
+182;58812;Op110;Paiement en ligne;Validé;Podor;27/08/2024 20:00;2500000;Fraude
+181;58181;Op109;ATM;Validé;Ziguinchor;26/08/2024 18:00;1000000;Fraude
+1490;58491;Op87;ATM;Validé;Matam;25/08/2024 01:00;600000;Fraude
+153;58135;Op95;Paiement électronique;Validé;Tambacounda;20/08/2024 01:00;10000000;Fraude
+138;588346;Op64;Paiement en ligne;Validé;Kédougou;18/08/2024 00:00;1000000;Fraude
+142;58100002;Op69;ATM;Validé;Kolda;12/08/2024 23:00;400000;Fraude
+1053;5810303050;OP1002;ATM;Validé;Kolda;10/08/2024 02:00;500000;Fraude
+103;58310;Op07;ATM;Validé;Dakar;02/08/2024 13:00;60000;Fraude
+102;58102;Op06;Paiement électronique;Validé;Touba;01/08/2024 09:00;500000;Fraude
+101;58110;Op05;ATM;Validé;Kaolack;31/07/2024 22:00;2000000;Fraude
+100;58100;Op04;Paiement en ligne;Validé;Thiès;30/07/2024 16:00;750000;Fraude
+103;58310;Op03;ATM;Validé;Dakar;29/07/2024 10:00;100000;Fraude
+102;58102;Op02;Paiement électronique;Validé;Saint Louis;28/07/2024 17:00;300000;Fraude
+108;58108;Op13;ATM;Validé;Kédougou;28/07/2024 10:00;500000;Fraude
+10840;5818400;Op103;Paiement en ligne;Echoué;Saint Louis;28/07/2024 01:00;6000000;Fraude
+111;58111;Op12;Paiement en ligne;Validé;Ziguinchor;27/07/2024 23:50;10000000;Fraude
+101;58110;Op01;Paiement en ligne;Validé;Paris;27/07/2024 02:00;5000000;Fraude
+110;58110;Op11;Paiement électronique;Validé;Kaolack;27/07/2024 02:00;5000000;Fraude
+100;58100;Op00;ATM;Validé;Ziguinchor;26/07/2024 18:00;1500000;Fraude
+108;58108;Op09;ATM;Validé;Tambacounda;26/07/2024 18:00;1500000;Fraude
+109;58190;Op10;Paiement en ligne;Validé;Saint Louis;26/07/2024 15:30;10000000;Fraude
+1079;581079;OP1052;Paiement en ligne;Validé;Kolda;25/07/2024 10:00;1000000;Fraude
+1480;58814;Op86;Paiement électronique;Validé;Kédougou;20/07/2024 02:00;2000000;Fraude
+146;588123456;Op80;Paiement électronique;Validé;Ziguinchor;20/07/2024 01:00;800000;Fraude
+152;58215;Op94;Paiement en ligne;Validé;Richard Toll;15/07/2024 03:00;5000000;Fraude
+169;58169;OP1026;Paiement en ligne;Validé;Touba;12/07/2024 00:00;3000000;Fraude
+121;58123457;Op33;Paiement en ligne;Validé;Mbour;10/07/2024 10:00;2000000;Fraude
+139;588457;Op60;ATM;Validé;Saint Louis;01/07/2024 06:00;350000;Fraude
+172;5808992;OP1036;ATM;Validé;Kaolack;01/07/2024 05:00;500000;Fraude
+153;58135;Op100;Paiement électronique;Echoué;Thiès;22/06/2024 17:00;5000000;Fraude
+1078;581087;OP1051;ATM;Validé;Matam;20/06/2024 21:00;750000;Fraude
+162;58216;OP1021;Paiement électronique;Validé;Tambacounda;18/06/2024 01:00;1200000;Fraude
+1470;58147;Op85;Paiement en ligne;Validé;Tambacounda;15/06/2024 22:00;300000;Fraude
+145;58100005;Op73;Paiement en ligne;Validé;Louga;15/06/2024 10:00;10000000;Fraude
+114;581234570;Op16;Paiement en ligne;Validé;Tambacounda;15/06/2024 03:00;800000;Fraude
+151;58151;Op93;ATM;Validé;Ziguinchor;10/06/2024 22:00;10000000;Fraude
+126;58126;Op38;Paiement électronique;Validé;Saint Louis;10/06/2024 03:00;3000000;Fraude
+149;588123459;Op78;ATM;Echoué;Louga;10/06/2024 00:00;1000000;Fraude
+165;58516;OP1020;Paiement en ligne;Echoué;Ziguinchor;25/05/2024 22:00;600000;Fraude
+131;58456800;Op46;Paiement en ligne;Validé;Richard Toll;25/05/2024 00:00;3000000;Fraude
+138;588346;Op59;Paiement électronique;Validé;Kaolack;20/05/2024 23:00;800000;Fraude
+18030;5810380;Op102;Paiement électronique;Validé;Kaolack;20/05/2024 02:00;1500000;Fraude
+117;58171;Op23;Paiement en ligne;Validé;Tambacounda;20/05/2024 01:00;10000000;Fraude
+168;58186;OP1025;Paiement électronique;Validé;Kaolack;20/05/2024 01:00;2000000;Fraude
+1800;580018;OP1050;Paiement électronique;Validé;Kédougou;15/05/2024 17:00;10000000;Fraude
+174;5808994;OP1033;Paiement en ligne;Validé;Tambacounda;10/05/2024 23:00;2500000;Fraude
+1460;58146;Op84;ATM;Validé;Ziguinchor;10/05/2024 20:00;1000000;Fraude
+141;58100001;Op67;Paiement en ligne;Validé;Saint Louis;10/05/2024 02:00;150000;Fraude
+179;58179;OP1042;ATM;Validé;Kaolack;05/05/2024 22:00;700000;Fraude
+123;58123459;Op32;ATM;Echoué;Dakar;01/05/2024 18:00;5000000;Fraude
+133;58133;Op55;Paiement électronique;En attente;Kolda;01/05/2024 00:00;7000000;Fraude
+1770;580717;OP1049;Paiement en ligne;Validé;Tambacounda;10/04/2024 01:00;500000;Fraude
+150;588123460;Op79;Paiement en ligne;Validé;Kaolack;05/04/2024 06:00;2000000;Fraude
+164;58164;OP1019;ATM;Validé;Saint Louis;01/04/2024 06:00;1000000;Fraude
+1760;580176;OP1048;ATM;Validé;Ziguinchor;25/03/2024 23:00;1500000;Fraude
+171;5808991;OP1030;ATM;Validé;Ziguinchor;15/03/2024 22:00;500000;Fraude
+146;588123456;Op75;ATM;Validé;Ziguinchor;15/03/2024 20:00;1500000;Fraude
+1501;5810203040;OP1000;Paiement en ligne;Validé;Ziguinchor;15/03/2024 18:00;1000000;Fraude
+116;58116;Op22;ATM;Validé;Ziguinchor;15/03/2024 15:00;1500000;Fraude
+124;58124;Op36;ATM;Validé;Ziguinchor;15/03/2024 15:00;1500000;Fraude
+163;58136;OP1018;Paiement électronique;Validé;Kaolack;10/03/2024 18:00;200000;Fraude
+10802;5808012;Op101;Paiement en ligne;Validé;Ziguinchor;10/03/2024 17:00;300000;Fraude
+167;58716;OP1024;ATM;Validé;Saint Louis;10/03/2024 05:00;5000000;Fraude
+137;588235;Op58;Paiement en ligne;Validé;Tambacounda;10/03/2024 02:00;400000;Fraude
+122;58123458;Op31;Paiement électronique;Validé;Kédougou;10/03/2024 00:00;10000000;Fraude
+143;58100003;Op71;Paiement en ligne;Echoué;Kédougou;29/02/2024 03:00;600000;Fraude
+117;58171;Op27;Paiement en ligne;Validé;Matam;28/02/2024 11:45;7500000;Fraude
+162;58216;OP1017;Paiement en ligne;Validé;Tambacounda;20/02/2024 03:00;1500000;Fraude
+132;58132;Op54;Paiement en ligne;Echoué;Saly;12/02/2024 23:00;1000000;Fraude
+178;58187;OP1041;Paiement électronique;Validé;Saint Louis;10/02/2024 10:00;200000;Fraude
+158;58185;OP1014;Paiement en ligne;Validé;Saint Louis;22/01/2024 23:00;400000;Fraude
+125;58152;Op37;Paiement en ligne;Validé;Tambacounda;20/01/2024 22:00;5000000;Fraude
+176;58176;OP1044;Paiement électronique;Validé;Podor;20/01/2024 18:00;600000;Fraude
+147;588123457;Op76;Paiement en ligne;Validé;Tambacounda;20/01/2024 02:00;400000;Fraude
+172;5808992;OP1031;Paiement en ligne;Validé;Tambacounda;20/01/2024 01:00;1000000;Fraude
+129;58234600;Op44;Paiement en ligne;Validé;Podor;16/01/2024 02:00;2000000;Fraude
+161;58161;OP1016;ATM;Validé;Ziguinchor;15/01/2024 23:00;700000;Fraude
+166;58166;OP1023;Paiement en ligne;Validé;Ziguinchor;15/01/2024 23:00;1500000;Fraude
+18001;5800181;Op100;ATM;Validé;Ziguinchor;15/01/2024 22:00;600000;Fraude
+136;588123;Op57;ATM;Validé;Ziguinchor;15/01/2024 20:00;600000;Fraude
+121;58123457;Op30;Paiement en ligne;Validé;Tambacounda;15/01/2024 02:00;5000000;Fraude
+115;581234590;Op18;ATM;Echoué;Dakar;01/01/2024 00:01;1500000;Fraude
+120;58123456;Op29;ATM;Validé;Ziguinchor;31/12/2023 23:59;1000000;Fraude
+144;58100004;Op72;Paiement électronique;Validé;Dakar;31/12/2023 23:59;6000000;Fraude
+148;588123458;Op77;Paiement électronique;Validé;Diourbel;31/12/2023 23:00;5000000;Fraude
+125;58152;Op41;ATM;Validé;Saly;25/12/2023 01:00;400000;Fraude
+173;5808993;OP1032;Paiement électronique;Validé;Saint Louis;25/12/2023 00:00;300000;Fraude
+1520;5810405060;OP1001;ATM;Validé;Tambacounda;20/11/2023 22:00;1500000;Fraude
+135;58311;Op53;ATM;Validé;Richard Toll;20/11/2023 03:00;5000000;Fraude
+142;58100002;Op68;Paiement électronique;Validé;Tambacounda;20/11/2023 01:00;500000;Fraude
+177;58717;OP1040;Paiement en ligne;Echoué;Tambacounda;20/11/2023 00:00;500000;Fraude
+128;58123500;Op47;ATM;Echoué;Louga;18/11/2023 06:00;500000;Fraude
+148;588123458;Op82;Paiement en ligne;Validé;Diourbel;05/11/2023 05:00;3000000;Fraude
+118;58118;Op24;Paiement électronique;Validé;Saint Louis;10/10/2023 23:00;5000000;Fraude
+173;5808993;OP1037;Paiement en ligne;En attente;Dakar;18/09/2023 20:00;175000;Fraude
+180;58018;OP1043;Paiement en ligne;En attente;Kédougou;12/08/2023 18:00;100000;Fraude
+175;5808995;OP1034;ATM;Validé;Ziguinchor;10/08/2023 19:00;200000;Fraude
+124;58124;Op40;Paiement en ligne;Echoué;Mbour;10/08/2023 18:00;1000000;Fraude
+130;58345700;Op45;Paiement électronique;Validé;Matam;20/07/2023 01:00;500000;Fraude
+1501;5810203040;OP1005;ATM;Echoué;Louga;10/07/2023 10:00;1250000;Fraude
+134;58134;Op52;Paiement électronique;Validé;Cap Skirring;10/07/2023 01:00;2000000;Fraude
+143;58100003;Op70;Paiement en ligne;Validé;Dakar;05/07/2023 00:00;5000000;Fraude
+177;58717;OP1045;ATM;Validé;Ziguinchor;01/06/2023 02:00;300000;Fraude
+112;581234560;Op19;Paiement en ligne;Validé;Saint Louis;20/05/2023 22:00;750000;Fraude
+1054;5810102030;OP1003;Paiement électronique;Validé;Kédougou;01/05/2023 00:00;2000000;Fraude
+133;58133;Op51;Paiement en ligne;Validé;Podor;22/04/2023 21:00;6000000;Fraude
+132;58132;Op50;ATM;Validé;Ziguinchor;18/03/2023 14:00;1500000;Fraude
+128;58123500;Op43;ATM;Validé;Ziguinchor;15/03/2023 22:00;1000000;Fraude
+141;58100001;Op66;ATM;Validé;Ziguinchor;15/03/2023 22:00;250000;Fraude
+176;58176;OP1039;ATM;Validé;Ziguinchor;15/03/2023 16:00;1000000;Fraude
+113;581234580;Op17;Paiement électronique;Validé;Kédougou;15/03/2023 01:00;600000;Fraude
+1053;5810303050;OP1007;Paiement électronique;En attente;Fatick;15/02/2023 17:00;1000000;Fraude

@@ -1,0 +1,86 @@
+# Les taches pour le scénario 2
+generate_clients_task :
+  description: >
+    Définissez différents catégories de clients (au max 4) avec leurs comportements de transactions 
+    bancaire normales effectué avec une carte par des utilisateurs sénégalais. C'est à dire les 
+    fréquences habituels, montants (en FCFA : il commence de 1 000 à des millions) habituels ou moyen, 
+    intervalles des montants de transaction ( ex : 1 000 - 500 000, 1 000 - 2 000 000, 1 000 - plus de 
+    2 000 000, ...), localisation habituels (partout au Sénégal: les client peuvent avoir plus de 10 
+    lieux habituels ou faire leurs transactions dans tous les régions), types de transactions habituels 
+    (ATM, Paiement en ligne, TPE : les clients peuvent 
+    avoir l'habitude d'utiliser tous les 3 ou 2 types de transactions), horaires habituels (ex : 8H-19H)...
+    Ne vous basez pas sur ses comportements seulement, cherchez sur internet pour améliorer ses 
+    comportements avec des comportements existants pour une meilleur modélisation des comportements 
+    transactionnels. Après cela, simulez {n} clients c'est à dire {n} codes clients et {n} numéro de 
+    comptes sachant que les numéros de comptes ne peuvent pas etre des chiffres consécutifs par exemple 
+    12345,23456789, etc. Simulez des numéros de comptes commençant par 58 (par exemples : 58901, 58057532)
+    et ayant entre 4 à 12 chiffres, et des numéros de codes clients compris entre 10000 et 40000. Chaque code 
+    client est associé à un seul numéro de compte ({n} codes clients et {n} numéro de comptes). Le code client 
+    représente l'identifiant du client. Maintenant prenez chaque client et mettez le dans une catégorie.
+    par exemple, s'il y a 5 clients et 3 catégorie de comportement, on pourra avoir 2 clients dans la 
+    catégorie 1, 1 client dans la catégorie 2 et 2 clients dans la catégorie 3. 
+    Tout les clients qui sont dans une meme catégorie ont les memes comportements de transactions.
+    Un client ne peut etre que dans une et une seul groupe.
+  expected_output : > 
+    Des groupes de comportements habituels pour des transactions bancaires normales effectuée avec une 
+    carte (Exemple : Group A: Frequency (month): 10-12; Avg. Amount (FCFA): 250,000 - 300,000 ; 
+    Amount Interval (FCFA): 1,000 - 500,000; Location: Dakar, Thies, Saint-Louis, Touba, Kaolack, etc ;
+    Transaction Type: ATM, Paiement en ligne ; Usual Hours: 8:00 - 20:00) et un dictionnaire de données dont la clé 
+    sera le nom du groupe et les éléments les numéros des codes clients et leur numéros de comptes associés.
+    Par exemple, {Groupe A : [ [30501, 58105], [10296, 58601549] ] , ...}
+  agent: client_behavior_agent
+
+normal_transactions_task : 
+  description: >
+    Recupérez les codes clients et leur numéro de compte associé fournit par l'agent 'Client and 
+    Behavior Generator'. Ses codes clients et numéro de comptes seront utilisé sur le processus de la 
+    simulation. Maintenant, vous allez générer {nb} transactions avec les colonnes suivants en 
+    utilisant les informations ci-dessous : code client, Numero de compte, 
+    identifiant operation, type de transaction (ATM, Paiement en ligne, Paiement électronique), status operation (Validé, 
+    En attente), localisation (la transaction peut se faire partout au Sénégal), date et heure (exemple : 25/01/2024 12:10), 
+    montant (FCFA : Avec 75% des montants inférieur à 300000), target (Normal). Les données simulées doivent refléter la réalité 
+    de la société sénégalaise. Les codes clients recupérés seront sur la colonne code client et leurs 
+    numéro de compte associés seront la colonne Numero de compte. Cela veut dire que vous utiliserez les 
+    memes codes clients et numéros de comptes fournis par l'agent 'Client and Behavior Generator' lors 
+    de la simulation des observations. Donnez des montants exactes en FCFA terminant par 0 ou des 0 et 
+    des dates compris entre Janvier 2023 et Décembre 2024. L'identifiant des clients commencera par 'OP' 
+    et pourra contenir des lettres et des chiffres par exemple OP26G8M. Prenez les clients fournit par l'agent 
+    'Client and Behavior Generator' et leur catégorie de comportement pour simuler {nb} observations en 
+    respectant les comportements de chaque client ou de son groupe catégorie et en faisant des choix 
+    aléatoires sur les types de transactions (mais pas des choix successifs). Les éléments qui sont 
+    entreparenthèses représentent les éléments qui doivent constituer la colonne. Dans la réalité, les transactions de 
+    type ATM sont plus fait par les clients. Le contenu des données doivent etre en français.
+  expected_output : >
+    Une historique des clients contenant des observations de transactions bancaires normales effectuées 
+    par des carte. Celle-ci sera enrégistré sur un  fichier 'Normales.csv' en utilisant ID Clients,Numero 
+    de compte,Identifiant operation,Type de transaction,Status operation,Localisation,Date,Montant,Target
+    comme entetes et ';' comme délimiter et qui sera toujours accessible par les agents et utilisateurs.
+    Le sortie doit contenir que les observations uniquement pas de caractère (par exemple ``` ou```text ou ```csv) ou chaine 
+    caractère au dessus et en dessous. Ce n'est pas la peine d'ajouter des commentaires au dessus de la 
+    sortie finale de meme qu'en dessous
+  agent : normal_transaction_agent
+
+fraude_transactions_task :
+  description: >
+    Recupérez les codes clients et leur numéro de compte associé fournit par l'agent 'Client and 
+    Behavior Generator'. Ses codes clients et numéro de comptes seront utilisé sur le processus de la 
+    simulation. Maintenant, vous allez générer {nb_fr} transactions avec les colonnes suivants en 
+    utilisant les informations ci-dessous : code client, Numero de compte, 
+    identifiant operation, type de transaction (ATM, Paiement en ligne, Paiement électronique), status operation (Validé, 
+    En attente, Echoué), localisation (la transaction peut se faire partout au Sénégal), date et heure, 
+    montant (FCFA : montant max : 15000000), target (Fraude). Donnez des montants exactes en FCFA terminant par 0 ou des 0 et 
+    des dates compris entre Janvier 2023 et Décembre 2024. Prenez aléatoirement les clients fournit par l'agent 
+    'Client and Behavior Generator' et leur catégorie de comportement pour simuler {nb_fr} observations
+    frauduleuses c'est à dire des observations qui ne respectent pas les comportements des clients qui ont 
+    été choisi ou du groupe correspondant. Une transaction frauduleuse est une obseravtion qui dépasse 
+    carrément les comportements du client choisi. Les éléments qui sont entreparenthèses représentent les 
+    éléments qui doivent constituer la colonne.
+  expected_output : >
+    Une historique des clients contenant des observations de transactions bancaires frauduleuses 
+    effectuées par carte. Celle-ci sera enrégistré sur un  fichier 'Fraude.csv' en utilisant ID Clients,Numero 
+    de compte,Identifiant operation,Type de transaction,Status operation,Localisation,Date,Montant,Target
+    comme entetes et ';' comme délimiter et le fichier sera toujours accessible par les agents et 
+    utilisateurs. Le sortie doit contenir que les observations uniquement pas de caractère  (``` ou ```text ou ```csv) ou 
+    chaine caractère au dessus et en dessous. Ce n'est pas la peine d'ajouter des commentaires au dessus 
+    de la sortie finale de meme qu'en dessous (par exemple : Here is the generated fraudulent transactions)
+  agent : fraude_transaction_agent

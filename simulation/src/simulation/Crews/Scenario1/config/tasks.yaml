@@ -1,0 +1,133 @@
+
+generator_task:
+  description: >
+    Utilise les types de transactions suivants
+    ATM, Paiement en ligne et Paiement électronique aléatoirement pour
+    générer {n_obs_ref} transactions ou observations bancaires synthéthiques  réalistes
+    (en utilisant les cartes) de {n_client} clients d'une banque sénégalaise nommé 'SenBank' pour une
+    période de  {nb_month} mois avec les colonnes suivantes : ID Clients,Numero de compte,Identifiant  
+    operation,Type de transaction,Status operation,Localisation,Date,Montant. Les transactions
+    peuvent  s'effectuer dans tout les régions du Sénégal et sont soit 'Validé'
+    ou 'En attente' ou 'Echoué'. Les observations simulées doivent etre comme
+    les observations réelles qui peuvent tromper la  vigilance des personnes sur
+    la véracité des données. Le client doit avoir plusieurs (plus de 5) zones de localisaton où il 
+    a l'habitude de faire ses opérations de transaction.
+    Générez des codes clients aléatoires compris entre 50000 et 80000 et des numéro de comptes commençant par 85 (exemple : 850578, 85458321).
+    Le code client est associé à un seul numéro compte et réprésente l'identifiant du client.
+    Un numéro de compte doit avoir 6 à 12 chiffres (entre 850000 et 859999999999). L'identifiant de l'opération doit commencer par 'TR' et peut contenir 
+    des lettres et chiffres (par exemple TR0AHB8L) avec 8 caractères. Pour chaque colonne citée ci-dessus, simulez des données avec les types les plus appropriées. Chaque 
+    client doit avoir au moins {nb_month} transactions dans le résultat final, c'est à dire que chaque 
+    client aura au moins une transaction par mois. Ses transactions simulées doivent commencer à  partir 
+    du 1ère mois 2023 au {nb_month}ième mois 2023. Faites de telles sortes que, les transactions simulées 
+    soient sur {nb_month} mois. Générez des données avec des montants faible, moyen  et élevé mais qui 
+    sont réalistes avec le type de transaction effectuée (ATM, Paiement en ligne,  Paiement électronique). 
+    Par rapport aux montants des transactions, simulez des observations avec  des montants allant de 
+    '1 000 FCFA' à plus de '10 000 000' et des dates de format 'jour/mois/année Heure:minute' (exemple : 25/04/2024 22:00), 
+    mettez les transactions simulées en ordres en allant du plus récents au plus anciens. Sur le contenu de la colonne montant,  
+    mettez la valeur uniquement sans l'expression FCFA. Respectez le format de dates qui est donné. Les données simulées doivent refléter la réalité de la société sénégalaise. 
+  expected_output: >
+    Une historiques de {n_obs_ref} observations de transactions bancaires
+    (avec carte) synthétiques d'une banque  sénégalaise pour une durée de
+    {nb_month} mois qui sera enrégistrer dans un fichier 'Transaction.csv' en
+    utilisant ID Clients,Numero de compte,Identifiant operation,Type de transaction,Status operation,
+    Localisation;Date,Montant comme entetes et ';' comme  délimiter et qui sera accessible par les autres agents
+    et utilisateurs. Les entetes doivent etre au premier ligne du fichier. Le  fichier doit contenir que les observations uniquement
+    pas de caractère (``` ou ```text ou ```csv) ou chaine caractère   au dessus et en dessous et le
+    contenu de la sortie sera en français. Ce n'est pas la peine d'ajouter  des
+    commentaires au dessus de la sortie du fichier de meme qu'à la fin.
+  agent: transaction_generator_agent
+
+ruler_task:
+  description: >
+    Analyse le comportement de chaque client généré par l'agent
+    {transaction_generator_agent} par  exemple son nombre de transaction par
+    mois ou par semaine, les zones qu'il a l'habitube de faire  ses transactions
+    (exemple : une transaction dans une région ou un pays inhabituel peut
+    être  suspecte), les fréquences de localisation (exemple : une carte
+    utilisée à Dakar à 14h et à Kédougou  à 14h05 peut etre suspecte), son
+    montant moyen, l'intervalle de ses montants de transaction, ses  types de
+    transactions habituelles, ses horaires habituels (intervalle d'heure par
+    exemple 9H-20H),  le statut de ses opérations (exemple : Plusieurs
+    transactions échouées avant une transaction réussie  peut signaler des
+    tentatives suspectes)... puis utilise le résultat de l'analyse de chaque
+    client  pour mettre en place un ensemble de règles pour chaque client afin
+    d'identifier leurs futurs  transactions suspectes, frauduleus et normales.
+    Notez bien qu'une transaction suspecte et  frauduleuse sont différents. La
+    variable 'Code clients' répresente l'identifiant des clients. Donc  prenez
+    cela en compte pour les règles qui seront mis en place pour les clients.
+    Sachez que la  sortie des règles sont au nombre de 3 : normal, suspecte et
+    fraude. Donnez les règles sous forme de texte mais pas sous forme de code.
+  expected_output: >
+    Un ensemble de règles ou stratégies de tout les clients pour
+    détecter les cas Normals, Suspects  et de Fraudes pour leurs futurs
+    transactions. Enrégistrer les règles mis en place sur tout les clients  sur un
+    fichier 'Regles.txt'.
+  agent: rules_agent
+
+new_generator_task:
+  description: >
+    Recupère les codes clients et leurs numéros de compte associé qui ont été générées par l'agent {transaction_generator_agent} 
+    et utilise les types de transactions suivants ATM, Paiement en ligne et Paiement  électronique aléatoirement pour
+    générer {n} nouvelles transactions bancaires synthéthiques  réaliste avec
+    les memes colonnes que les premiers transactions simulées par
+    l'agent  {transaction_generator_agent} (Code clients,Numero de compte, Identifiant operation,  type de transaction,
+    status operation, localisation, date, montant). Les observations doivent etre comme
+    des observations réelles qui  peuvent tromper la vigilance des personnes sur
+    la véracité des données. Les transactions ATM sont les plus fait par les clients dans la réalité
+    L'identifiant de l'opération doit commencer par 'TR' et peut contenir des chiffres et des lettres. Regarder sur les   
+    transactions générées par l'agent {transaction_generator_agent} le dernier mois qui a été généré et les transactions  
+    qui seront générées à nouveau pour cette tache seront sur les {nb_month} prochaines mois de ce mois 
+    trouvé. Autrement dit, Ses transactions doivent commencer à partir du mois suivant du dernière mois 
+    des transaction de l'agent {transaction_generator_agent}. Par exemple, si la dernière transaction  
+    simulée par l'agent {transaction_generator_agent} est en Avril, les transactions qui seront simulées 
+    doivent commencer à partir du mois de Mai. Chaque client doit avoir au moins une transaction effectuée par 
+    mois et mettez les observations en ordre chronologiques du plus récents au plus anciens. Faites de telles sortes que, les données qui 
+    seront simulées soient sur {nb_month} mois ou plus et ne simulez  jamais des observations ayant comme 
+    date le deuxième mois 2025. En effet, la limite des dates pour les observations est le 31/01/2025. Les 
+    transactions doivent avoir des dates inférieur au 31 Janvier 2025. Les 
+    données générées doivent etre au meme format que les transactions de l'agent {transaction_generator_agent} 
+    (meme colonnes et meme types de  données, meme code client et numéro de compte, etc.). En résumé votre 
+    tache est pratiquement le meme  que la tache éxecutée par l'agent {transaction_generator_agent} pour 
+    la génération de données  bancaires synthétiques avec carte. Prenez tout le temps nécessaire pour 
+    générer le nombre exact de transactions demandées ({n}) ni moins, ni plus, ne fait aucune point de 
+    suspension pour masquer ou omettre certains observations. Faite de tels sorte que si on applique les règles de détection qui ont été défini 
+    par l'agent {rules_agent} sur les données qui seront générées qu'on aura au moins 95% de transactions normales 
+  expected_output: >
+    Un nouveau historique de {n} observations de transactions
+    bancaires synthétiques sénégalaise   effectuée avec une carte avec les memes
+    clients que l'agent {transaction_generator_agent} avait  généré et avec les
+    memes colonnes qui seront l'entete et qui sera enrégistrer dans un
+    fichier  'New_Transaction.csv' en utilisant ';' comme  délimiter et qui sera
+    accessible par les autres  agents et utilisateurs. Le contenu de la sortie
+    sera en français. Le fichier doit contenir que les  observations de
+    transactions uniquement pas de caractère ou chaine caractère au dessus et en
+    dessous. Ce n'est pas la peine d'ajouter des commentaires au dessus de la
+    sortie finale de meme qu'en dessous.
+  agent: generator_agent
+
+classify_task:
+  description: >
+    Recupère tout les règles de l'agent {rules_agent} et les {n}
+    observations de transactions générées  par l'agent {generator_agent}. Puis
+    classe les observations des clients en 3 catégories : Normal,  Suspect et
+    Fraude en utilisant ses règles. Pour chaque client, utilise ses propres
+    règles qui ont  été défini pour classer ses transactions. Ajoute une colonne
+    'target' pour le résultat de la  classification des observations. Le nouveau
+    dataset doit garder le meme format que les données avant  classification.
+  expected_output: >
+    L'historique des {n} nouvelles observations de transactions
+    générées par l'agent {generator_agent}  avec ses colonnes + la colonne
+    'Target' qui contient les résultats de classification (Normal,  Suspect ou
+    Fraude) des observations génénées. Le contenu de la sortie sera en français.
+    L'historique  doit garder le format de données initiale (avant
+    classification). Celle-ci sera enrégistré sur un fichier
+    'Bank_transaction.csv' en utilisant ID Clients,Numero de compte,Identifiant operation,Type de 
+    transaction,Status operation,Localisation,Date,Montant,Target comme entetes et ';' comme délimiter 
+    et le ficier sera toujours accessible par les agents et utilisateurs. Les entetes seront au premier ligne du fichier 
+    'Bank_transaction.csv' ou de la sortie finale mais pas au deuxième ligne. 
+    Le sortie finale contiendra que les observations uniquement et ne doit pas avoir de caractère  (par exemple ``` ou ```text ou ```csv) ou chaine caractère au
+    dessus et en dessous du fichier. Ce n'est pas la peine d'ajouter des commentaires  au
+    dessus de la sortie finale de meme qu'en dessous (par exemple : ``` ou ```text ou ```csv)
+  agent: transaction_classifier_agent
+
+
